@@ -1,0 +1,8 @@
+# Authorized Digital Sellers - ads.txt
+# Last updated: 2025-10-26
+
+# Example entry format:
+# domain-name, seller-account-id, account-type, certification-authority-id
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+
+# Add your advertising partners below:

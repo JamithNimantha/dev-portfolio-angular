@@ -1,0 +1,51 @@
+<header class="bg-white shadow-sm fixed w-full top-0 z-50">
+  <nav class="container mx-auto px-4 py-4">
+    <div class="flex justify-between items-center">
+      <a routerLink="/" class="text-2xl font-bold text-primary">
+        Portfolio
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex space-x-8">
+        <a routerLink="/" routerLinkActive="text-secondary" class="hover:text-secondary transition-colors">
+          Home
+        </a>
+        <a routerLink="/about" routerLinkActive="text-secondary" class="hover:text-secondary transition-colors">
+          About
+        </a>
+        <a routerLink="/projects" routerLinkActive="text-secondary" class="hover:text-secondary transition-colors">
+          Projects
+        </a>
+        <a routerLink="/contact" routerLinkActive="text-secondary" class="hover:text-secondary transition-colors">
+          Contact
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden" (click)="toggleMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path *ngIf="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          <path *ngIf="isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div *ngIf="isMenuOpen" class="md:hidden mt-4">
+      <div class="flex flex-col space-y-4">
+        <a routerLink="/" routerLinkActive="text-secondary" class="hover:text-secondary transition-colors">
+          Home
+        </a>
+        <a routerLink="/about" routerLinkActive="text-secondary" class="hover:text-secondary transition-colors">
+          About
+        </a>
+        <a routerLink="/projects" routerLinkActive="text-secondary" class="hover:text-secondary transition-colors">
+          Projects
+        </a>
+        <a routerLink="/contact" routerLinkActive="text-secondary" class="hover:text-secondary transition-colors">
+          Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>

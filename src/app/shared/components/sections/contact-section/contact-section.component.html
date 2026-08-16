@@ -1,0 +1,71 @@
+<section id="contact" class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6 animate-fade-in hover:shadow-lg transition-all transform hover:translate-y-[-5px]" style="animation-delay: 0.1s">
+  <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">Get In Touch</h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700 rounded-lg p-5 text-center flex flex-col items-center rounded-lg shadow-sm transition-all duration-300 group  hover:border-primary dark:hover:border-secondary transform hover:scale-102 hover:shadow-soft-lg">
+      <div class="w-14 h-14 bg-primary/10 dark:bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary dark:text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">Email</h3>
+      <p class="text-gray-600 dark:text-gray-300 mb-4">I'll get back to you within 24 hours</p>
+      <a href="mailto:hello@example.com" class="text-primary dark:text-secondary hover:underline">hello&#64;example.com</a>
+    </div>
+    
+    <div class="border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700 rounded-lg p-5 text-center flex flex-col items-center rounded-lg shadow-sm transition-all duration-300 group  hover:border-primary dark:hover:border-secondary transform hover:scale-102 hover:shadow-soft-lg">
+      <div class="w-14 h-14 bg-primary/10 dark:bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary dark:text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">Social Media</h3>
+      <p class="text-gray-600 dark:text-gray-300 mb-4">Connect with me on social platforms</p>
+      <div *ngIf="socialLinks" class="mt-6 md:mt-8 flex flex-wrap gap-3 justify-center">
+          <a *ngFor="let link of socialLinks"
+             [href]="link.url"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">
+              <span class="sr-only">{{ link.name }}</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 512 512" aria-hidden="true">
+                  <path [attr.d]="IconUtil.getIcon(link.icon)"></path>
+              </svg>
+          </a>
+      </div>
+    </div>
+    
+<!--    <div class="border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700 rounded-lg p-5 text-center flex flex-col items-center rounded-lg shadow-sm transition-all duration-300 group  hover:border-primary dark:hover:border-secondary transform hover:scale-102 hover:shadow-soft-lg">-->
+<!--      <div class="w-14 h-14 bg-primary/10 dark:bg-secondary/10 rounded-full flex items-center justify-center mb-4">-->
+<!--        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary dark:text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
+<!--          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />-->
+<!--        </svg>-->
+<!--      </div>-->
+<!--      <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">Resume</h3>-->
+<!--      <p class="text-gray-600 dark:text-gray-300 mb-4">Download my latest resume to learn more</p>-->
+<!--      <a href="assets/resume.pdf" download class="text-primary dark:text-secondary hover:underline flex items-center justify-center">-->
+<!--        <span>Download Resume</span>-->
+<!--        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
+<!--          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />-->
+<!--        </svg>-->
+<!--      </a>-->
+<!--    </div>-->
+  </div>
+  
+  <div *ngIf="false" class="mt-8 flex justify-center">
+      <button (click)="openModal()" class="btn-outline transform transition-transform hover:scale-105">
+          <span>Contact Me</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+               stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+      </button>
+  </div>
+
+</section>
+<app-contact-modal
+        [isOpen]="isContactModalOpen"
+        (close)="closeContactModal()"
+        (submit)="handleContactFormSubmit($event)">
+</app-contact-modal>

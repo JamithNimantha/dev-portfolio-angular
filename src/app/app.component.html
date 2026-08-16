@@ -1,0 +1,352 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+  :host {
+    --bright-blue: oklch(51.01% 0.274 263.83);
+    --electric-violet: oklch(53.18% 0.28 296.97);
+    --french-violet: oklch(47.66% 0.246 305.88);
+    --vivid-pink: oklch(69.02% 0.277 332.77);
+    --hot-red: oklch(61.42% 0.238 15.34);
+    --orange-red: oklch(63.32% 0.24 31.68);
+
+    --gray-900: oklch(19.37% 0.006 300.98);
+    --gray-700: oklch(36.98% 0.014 302.71);
+    --gray-400: oklch(70.9% 0.015 304.04);
+
+    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
+      180deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
+      90deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --pill-accent: var(--bright-blue);
+
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    font-size: 3.125rem;
+    color: var(--gray-900);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+  }
+
+  p {
+    margin: 0;
+    color: var(--gray-700);
+  }
+
+  main {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+  }
+
+  .angular-logo {
+    max-width: 9.2rem;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+
+  .content h1 {
+    margin-top: 1.75rem;
+  }
+
+  .content p {
+    margin-top: 1.5rem;
+  }
+
+  .divider {
+    width: 1px;
+    background: var(--red-to-pink-to-purple-vertical-gradient);
+    margin-inline: 0.5rem;
+  }
+
+  .pill-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .pill {
+    display: flex;
+    align-items: center;
+    --pill-accent: var(--bright-blue);
+    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
+    color: var(--pill-accent);
+    padding-inline: 0.75rem;
+    padding-block: 0.375rem;
+    border-radius: 2.75rem;
+    border: 0;
+    transition: background 0.3s ease;
+    font-family: var(--inter-font);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4rem;
+    letter-spacing: -0.00875rem;
+    text-decoration: none;
+  }
+
+  .pill:hover {
+    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
+  }
+
+  .pill-group .pill:nth-child(6n + 1) {
+    --pill-accent: var(--bright-blue);
+  }
+  .pill-group .pill:nth-child(6n + 2) {
+    --pill-accent: var(--french-violet);
+  }
+  .pill-group .pill:nth-child(6n + 3),
+  .pill-group .pill:nth-child(6n + 4),
+  .pill-group .pill:nth-child(6n + 5) {
+    --pill-accent: var(--hot-red);
+  }
+
+  .pill-group svg {
+    margin-inline-start: 0.25rem;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.73rem;
+    margin-top: 1.5rem;
+  }
+
+  .social-links path {
+    transition: fill 0.3s ease;
+    fill: var(--gray-400);
+  }
+
+  .social-links a:hover svg path {
+    fill: var(--gray-900);
+  }
+
+  @media screen and (max-width: 650px) {
+    .content {
+      flex-direction: column;
+      width: max-content;
+    }
+
+    .divider {
+      height: 1px;
+      width: 100%;
+      background: var(--red-to-pink-to-purple-horizontal-gradient);
+      margin-block: 1.5rem;
+    }
+  }
+</style>
+
+<div [ngClass]="{'dark': isDarkMode}" class="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900">
+  <!-- Header/Navigation -->
+  <header class="sticky top-0 z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-700/50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo and brand -->
+        <div class="flex items-center">
+          <a [routerLink]="['/']" class="flex items-center space-x-2 text-primary dark:text-white">
+            <img ngSrc="assets/images/profile-36px.webp" priority height="36" width="36" fetchpriority="high" alt="John Doe" class="w-10 h-10 rounded-full border-2 border-primary transition-transform hover:scale-110">
+            <span class="text-xl font-bold hidden md:block animate-fade-in">John Doe</span>
+          </a>
+        </div>
+
+        <!-- Desktop Nav Menu -->
+        <nav class="hidden md:flex space-x-6">
+          <div (click)="scrollToSection('about')" class="nav-link relative cursor-pointer text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full">About</div>
+          <div (click)="scrollToSection('projects')" class="nav-link relative cursor-pointer text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full">Projects</div>
+          <div (click)="scrollToSection('blog')" class="nav-link relative cursor-pointer text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full">Blog</div>
+          <div (click)="scrollToSection('experience')" class="nav-link relative cursor-pointer text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full">Experience</div>
+          <div (click)="scrollToSection('skills')" class="nav-link hover:scale-110 transition-transform relative group">
+            Skills
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary dark:bg-secondary group-hover:w-full transition-all duration-300"></span>
+          </div>
+          <div (click)="scrollToSection('testimonials')" class="nav-link relative cursor-pointer text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full">Testimonials</div>
+          <div (click)="scrollToSection('contact')" class="nav-link relative cursor-pointer text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full">Contact</div>
+        </nav>
+
+        <!-- Right buttons -->
+        <div class="flex items-center space-x-3">
+          <!-- Dark Mode Toggle -->
+          <button (click)="toggleDarkMode()" aria-label="Toggle Dark Mode" class="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+            <svg *ngIf="!isDarkMode" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+      </svg>
+            <svg *ngIf="isDarkMode" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </button>
+
+          <!-- Contact button -->
+          <div (click)="scrollToSection('contact')"
+             class="btn-outline hidden sm:inline-flex items-center transform transition-transform hover:scale-105">
+
+            <span>Contact Me</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                   stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button (click)="toggleMenu()" aria-label="Toggle Mobile Menu" class="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path *ngIf="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              <path *ngIf="isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div *ngIf="isMenuOpen" class="md:hidden bg-white dark:bg-gray-800 shadow-md animate-slide-down overflow-hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <div (click)="scrollToSection('about')" class="mobile-nav-link block w-full text-left px-3 py-2">About</div>
+        <div (click)="scrollToSection('projects')" class="mobile-nav-link block w-full text-left px-3 py-2">Projects</div>
+        <div (click)="scrollToSection('blog')" class="mobile-nav-link block w-full text-left px-3 py-2">Blog</div>
+        <div (click)="scrollToSection('experience')" class="mobile-nav-link block w-full text-left px-3 py-2">Experience</div>
+        <div (click)="scrollToSection('skills')" class="mobile-nav-link block w-full text-left px-3 py-2">Skills</div>
+        <div (click)="scrollToSection('testimonials')" class="mobile-nav-link block w-full text-left px-3 py-2">Testimonials</div>
+        <div (click)="scrollToSection('contact')" class="mobile-nav-link block w-full text-left px-3 py-2">Contact</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content with hero section -->
+  <div class="flex-grow">
+    <!-- Hero Section - only show when showHero is true -->
+<!--    <section *ngIf="showHero" class="relative bg-gradient-to-r from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 py-16 md:py-20 overflow-hidden">-->
+<!--      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">-->
+<!--        <div class="md:flex md:items-center md:justify-between">-->
+<!--          <div class="md:w-1/2 animate-slide-up">-->
+<!--            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">-->
+<!--              <span class="block">Full-Stack </span>-->
+<!--                <span class="block text-primary dark:text-secondary">Developer</span>-->
+<!--            </h1>-->
+<!--            <p class="mt-3 text-base text-gray-600 dark:text-gray-300 sm:mt-5 sm:text-lg">-->
+<!--              Passionate about creating elegant solutions to complex problems. Specialized in building scalable web applications using modern technologies.-->
+<!--            </p>-->
+<!--            <div class="mt-4 md:mt-6 flex flex-wrap gap-3">-->
+<!--              <a href="https://medium.com/@johndoe" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">-->
+<!--                <span class="flex items-center">-->
+<!--                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">-->
+<!--                    <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75S24 8.83 24 12z"/>-->
+<!--                  </svg>-->
+<!--                  Blog-->
+<!--                </span>-->
+<!--              </a>-->
+<!--              <a href="https://github.com/johndoe" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">-->
+<!--                <span class="flex items-center">-->
+<!--                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">-->
+<!--                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+<!--                  </svg>-->
+<!--                  GitHub-->
+<!--                </span>-->
+<!--              </a>-->
+<!--              <a href="https://linkedin.com/in/johndoe" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">-->
+<!--                <span class="flex items-center">-->
+<!--                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">-->
+<!--                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>-->
+<!--                  </svg>-->
+<!--                  LinkedIn-->
+<!--                </span>-->
+<!--              </a>-->
+<!--              <a href="https://twitter.com/johndoe" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">-->
+<!--                <span class="flex items-center">-->
+<!--                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">-->
+<!--                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>-->
+<!--                  </svg>-->
+<!--                  Twitter-->
+<!--                </span>-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <div class="mt-6 md:mt-8 flex flex-wrap gap-4">-->
+<!--              <button (click)="scrollToSection('projects')" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center">-->
+<!--                <span>View Projects</span>-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
+<!--                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />-->
+<!--                </svg>-->
+<!--              </button>-->
+<!--              <button (click)="openContactModal()" class="bg-transparent hover:bg-blue-600 text-blue-600 hover:text-white font-semibold py-3 px-6 border border-blue-600 hover:border-transparent rounded-lg transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center">-->
+<!--                <span>Contact Me</span>-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
+<!--                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />-->
+<!--                </svg>-->
+<!--              </button>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="mt-8 md:mt-0 md:w-1/2 flex justify-center animate-slide-up" style="animation-delay: 0.3s">-->
+<!--            <img src="assets/images/profile.jpg" alt="John Doe" class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-xl transition-transform hover:scale-105">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      -->
+<!--      &lt;!&ndash; Decorative elements &ndash;&gt;-->
+<!--      <div class="absolute -bottom-8 -left-8 w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/20 dark:bg-primary/30 animate-pulse"></div>-->
+<!--      <div class="absolute top-12 right-12 w-16 h-16 md:w-24 md:h-24 rounded-full bg-secondary/20 dark:bg-secondary/30 animate-pulse" style="animation-delay: 0.5s"></div>-->
+<!--      <div class="absolute bottom-20 right-8 w-8 h-8 md:w-12 md:h-12 rounded-full bg-primary/20 dark:bg-primary/30 animate-pulse" style="animation-delay: 1s"></div>-->
+<!--    </section>-->
+      <app-hero-section
+              [showHero]="showHero"
+              [scrollToSection]="scrollToSection.bind(this)"
+              >
+      </app-hero-section>
+    <!-- Main content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+
+  <!-- Footer -->
+    <app-footer></app-footer>
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+

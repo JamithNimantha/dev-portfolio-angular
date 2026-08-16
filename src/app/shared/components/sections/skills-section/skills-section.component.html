@@ -1,0 +1,81 @@
+<section id="skills" class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6 animate-fade-in hover:shadow-lg transition-all transform hover:translate-y-[-5px]" style="animation-delay: 0.1s">
+  <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">Skills</h2>
+  
+<!--  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">-->
+<!--    <div>-->
+<!--      <div class="flex justify-between mb-1">-->
+<!--        <span class="font-medium text-gray-700 dark:text-gray-300">Angular</span>-->
+<!--        <span class="text-gray-700 dark:text-gray-300">95%</span>-->
+<!--      </div>-->
+<!--      <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">-->
+<!--        <div class="progress-bar" style="width: 95%"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    -->
+<!--    <div>-->
+<!--      <div class="flex justify-between mb-1">-->
+<!--        <span class="font-medium text-gray-700 dark:text-gray-300">React</span>-->
+<!--        <span class="text-gray-700 dark:text-gray-300">90%</span>-->
+<!--      </div>-->
+<!--      <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">-->
+<!--        <div class="progress-bar" style="width: 90%"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    -->
+<!--    <div>-->
+<!--      <div class="flex justify-between mb-1">-->
+<!--        <span class="font-medium text-gray-700 dark:text-gray-300">Node.js</span>-->
+<!--        <span class="text-gray-700 dark:text-gray-300">85%</span>-->
+<!--      </div>-->
+<!--      <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">-->
+<!--        <div class="progress-bar" style="width: 85%"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    -->
+<!--    <div>-->
+<!--      <div class="flex justify-between mb-1">-->
+<!--        <span class="font-medium text-gray-700 dark:text-gray-300">TypeScript</span>-->
+<!--        <span class="text-gray-700 dark:text-gray-300">90%</span>-->
+<!--      </div>-->
+<!--      <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">-->
+<!--        <div class="progress-bar" style="width: 90%"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    -->
+<!--    <div>-->
+<!--      <div class="flex justify-between mb-1">-->
+<!--        <span class="font-medium text-gray-700 dark:text-gray-300">MongoDB</span>-->
+<!--        <span class="text-gray-700 dark:text-gray-300">80%</span>-->
+<!--      </div>-->
+<!--      <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">-->
+<!--        <div class="progress-bar" style="width: 80%"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    -->
+<!--    <div>-->
+<!--      <div class="flex justify-between mb-1">-->
+<!--        <span class="font-medium text-gray-700 dark:text-gray-300">PostgreSQL</span>-->
+<!--        <span class="text-gray-700 dark:text-gray-300">75%</span>-->
+<!--      </div>-->
+<!--      <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">-->
+<!--        <div class="progress-bar" style="width: 75%"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  -->
+    <div class="space-y-6">
+        <div *ngFor="let group of skillGroups">
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">{{ group.title }}</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <div *ngFor="let skill of group.skills"
+                     class="border border-gray-200 dark:border-gray-700  bg-gray-100 dark:bg-gray-700 px-4 py-2 rounded-lg text-center transition-all duration-300 group shadow-md hover:border-primary dark:hover:border-secondary transform hover:scale-105 hover:shadow-soft-lg">
+                    <i [class]="skill.icon + ' text-2xl text-primary dark:text-secondary mb-2'"></i>
+                    <div class="text-sm font-medium text-gray-700 dark:text-gray-300">{{ skill.name }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>

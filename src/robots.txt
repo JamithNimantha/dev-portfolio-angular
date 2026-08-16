@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /assets/resume.pdf
+Disallow: /resume.pdf
+
+Allow: /
+
+# Optional: provide sitemap if you generate one
+# Sitemap: https://example.com/sitemap.xml
+

@@ -1,0 +1,55 @@
+<section id="blog" class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6 animate-fade-in hover:shadow-lg transition-all transform hover:translate-y-[-5px]" style="animation-delay: 0.1s">
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold text-gray-800 dark:text-white">Recent Blog Posts</h2>
+        <a href="https://example.com" target="_blank" class="text-primary dark:text-secondary hover:underline flex items-center">
+            View All
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- Main Blog Posts -->
+    <ng-container *ngIf="recentPosts.length; else loading">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article *ngFor="let post of recentPosts" class="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-soft-lg group hover:border-primary dark:hover:border-secondary transform hover:scale-105">
+                <div class="relative overflow-hidden">
+                    <img [src]="post.image" [alt]="post.title" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute top-3 right-3 bg-primary text-white text-xs font-bold py-1 px-2 rounded">{{ post.category }}</div>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                        <span>{{ post.date }}</span>
+                        <span class="mx-2">•</span>
+                        <span>{{ post.readTime }}</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2 group-hover:text-primary dark:group-hover:text-secondary transition-colors">
+                        {{ post.title }}
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">{{ post.excerpt }}</p>
+                    <a [href]="post.link" target="_blank" class="text-primary dark:text-secondary hover:underline text-sm font-medium flex items-center">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </ng-container>
+
+    <!-- Skeleton Loading Placeholder -->
+    <ng-template #loading>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-pulse">
+            <div *ngFor="let skeleton of [1, 2, 3]" class="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+                <div class="bg-gray-300 dark:bg-gray-700 h-48 w-full"></div>
+                <div class="p-5">
+                    <div class="h-4 bg-gray-300 dark:bg-gray-700 rounded w-1/2 mb-2"></div>
+                    <div class="h-3 bg-gray-300 dark:bg-gray-700 rounded w-3/4 mb-2"></div>
+                    <div class="h-3 bg-gray-300 dark:bg-gray-700 rounded w-2/3 mb-4"></div>
+                    <div class="h-3 bg-gray-300 dark:bg-gray-700 rounded w-1/4"></div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</section>

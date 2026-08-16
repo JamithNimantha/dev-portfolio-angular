@@ -1,0 +1,135 @@
+/* Global styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+    background-image: radial-gradient(circle at top right, rgba(59, 130, 246, 0.08), transparent 50%), radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.05), transparent 50%);
+  }
+  
+  .dark body {
+    background-image: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 50%), radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.1), transparent 50%);
+  }
+  
+  .dark {
+    @apply text-gray-100;
+  }
+  
+  section:target {
+    @apply scroll-mt-16;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-5 py-2 rounded-md font-medium text-sm md:text-base transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary/90 dark:bg-secondary dark:text-gray-900 dark:hover:bg-secondary/90 focus-visible:ring-primary dark:focus-visible:ring-secondary shadow-[0_0_10px_rgba(59,130,246,0.4)] hover:shadow-[0_0_20px_rgba(59,130,246,0.6)] dark:shadow-[0_0_10px_rgba(16,185,129,0.3)] dark:hover:shadow-[0_0_20px_rgba(16,185,129,0.5)];
+  }
+  
+  .btn-secondary {
+    @apply btn bg-gray-800 text-white hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 focus-visible:ring-gray-700;
+  }
+  
+  .btn-outline {
+    @apply btn bg-transparent border-2 border-primary text-primary hover:bg-primary/10 dark:border-secondary dark:text-secondary dark:hover:bg-secondary/10 focus-visible:ring-primary dark:focus-visible:ring-secondary hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] dark:hover:shadow-[0_0_15px_rgba(16,185,129,0.3)];
+  }
+  
+  .nav-link {
+    @apply text-gray-700 dark:text-gray-300 font-medium px-1 py-1 cursor-pointer select-none hover:text-primary dark:hover:text-secondary transition-colors;
+  }
+  
+  .mobile-nav-link {
+    @apply block rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary dark:hover:text-secondary transition-colors font-medium cursor-pointer select-none;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all p-4 md:p-6;
+  }
+  
+  .section-title {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6 relative inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply absolute left-0 -bottom-2 h-1 w-12 bg-primary dark:bg-secondary rounded-full;
+  }
+  
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16;
+  }
+  
+  .progress-bar {
+    @apply h-2 rounded-full bg-primary dark:bg-secondary;
+  }
+  
+  .content-vis {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+  }
+}
+
+/* Dark mode text colors */
+.dark .text-gray-800 { @apply text-gray-200; }
+.dark .text-gray-700 { @apply text-gray-300; }
+.dark .text-gray-600 { @apply text-gray-400; }
+.dark .border { @apply border-gray-700; }
+.dark .bg-white { @apply bg-gray-800; }
+
+/* Animations */
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out forwards;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slide-up {
+  0% { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fix for anchor links with fixed header */
+html {
+  scroll-padding-top: 4rem;
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+  .nav-link, .mobile-nav-link, button, a {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  button, a {
+    @apply flex items-center justify-center;
+  }
+}

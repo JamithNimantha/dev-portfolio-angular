@@ -1,0 +1,32 @@
+<!-- All Sections -->
+<app-about-section></app-about-section>
+<app-what-i-do-section></app-what-i-do-section>
+<app-featured-projects-section
+  [recentProjects]="recentProjects"
+  (openModal)="openProjectModal()">
+</app-featured-projects-section>
+<app-blog-posts-section></app-blog-posts-section>
+<app-experience-section></app-experience-section>
+<app-education-section></app-education-section>
+<app-skills-section></app-skills-section>
+<app-testimonials-section
+  [featuredTestimonials]="featuredTestimonials"
+  (openModal)="openTestimonialModal()">
+</app-testimonials-section>
+
+<!--<app-languages-section></app-languages-section>-->
+<app-contact-section></app-contact-section>
+
+<!-- Project Modal Component -->
+<app-project-modal
+  [isOpen]="isProjectModalOpen"
+  [projects]="allProjects"
+  (closeModal)="closeProjectModal()">
+</app-project-modal>
+
+<!-- Testimonial Modal -->
+<app-testimonial-modal
+  [isOpen]="isTestimonialModalOpen"
+  [testimonials]="allTestimonials"
+  (closeModal)="closeTestimonialModal()">
+</app-testimonial-modal>

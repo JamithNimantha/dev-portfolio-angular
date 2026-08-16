@@ -1,0 +1,41 @@
+name: John Doe
+title: Senior Software Engineer
+website: https://example.com
+blog: https://blog.example.com
+
+socialLinks:
+  - name: GitHub
+    url: https://github.com/johndoe
+    icon: github
+
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/johndoe
+    icon: linkedin
+
+  - name: Facebook
+    url: https://www.facebook.com/johndoe
+    icon: facebook
+
+  - name: Instagram
+    url: https://www.instagram.com/johndoe
+    icon: instagram
+
+  - name: Twitter
+    url: https://twitter.com/johndoe
+    icon: x
+
+  - name: Blog
+    url: https://blog.example.com
+    icon: blogger
+
+  - name: Website
+    url: https://example.com
+    icon: blog
+
+  - name: Stack Overflow
+    url: https://stackoverflow.com/users/000000/johndoe
+    icon: stackoverflow
+
+  - name: GitLab
+    url: https://gitlab.com/johndoe
+    icon: gitlab

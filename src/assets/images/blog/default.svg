@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="Blog post">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#374151"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <g font-family="'Fira Code', 'SF Mono', Menlo, monospace" font-size="26" fill="#9ca3af">
+    <text x="80" y="150"><tspan fill="#3b82f6">const</tspan> post = <tspan fill="#10b981">await</tspan> blog.read();</text>
+    <text x="80" y="200"><tspan fill="#3b82f6">if</tspan> (post.helpful) share(post);</text>
+  </g>
+  <text x="80" y="290" font-family="Inter, sans-serif" font-size="40" font-weight="700" fill="#f9fafb">Blog<tspan fill="#3b82f6">.</tspan></text>
+  <text x="80" y="325" font-family="Inter, sans-serif" font-size="20" fill="#9ca3af">Tutorials for developers</text>
+</svg>
