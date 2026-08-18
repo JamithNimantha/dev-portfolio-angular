@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ChangeDetectionStrategy } from '@angular/core';
 
 import { Project } from '../../../../pages/home/home.component';
 
@@ -7,6 +7,7 @@ import { Project } from '../../../../pages/home/home.component';
   standalone: true,
   imports: [],
   templateUrl: './featured-projects-section.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './featured-projects-section.component.scss'
 })
 export class FeaturedProjectsSectionComponent {

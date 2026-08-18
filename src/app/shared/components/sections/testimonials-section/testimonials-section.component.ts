@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ChangeDetectionStrategy } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { Testimonial } from '../../testimonial-modal/testimonial-modal.component';
 
@@ -7,6 +7,7 @@ import { Testimonial } from '../../testimonial-modal/testimonial-modal.component
   standalone: true,
   imports: [NgOptimizedImage],
   templateUrl: './testimonials-section.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './testimonials-section.component.scss'
 })
 export class TestimonialsSectionComponent {

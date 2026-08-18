@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import {ProfileService, SocialLink} from "../../../../services/profile.service";
 import {IconUtil} from "../../../util/icon-util";
@@ -8,6 +8,7 @@ import {IconUtil} from "../../../util/icon-util";
   standalone: true,
   imports: [NgOptimizedImage],
   templateUrl: './hero-section.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./hero-section.component.scss']
 })
 export class HeroSectionComponent implements OnInit {

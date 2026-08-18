@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, ChangeDetectionStrategy} from '@angular/core';
 
 import {ProfileService, SocialLink} from "../../../../services/profile.service";
 import {IconUtil} from "../../../util/icon-util";
@@ -9,6 +9,7 @@ import {ContactForm, ContactModalComponent} from "../../contact-modal/contact-mo
   standalone: true,
   imports: [ContactModalComponent],
   templateUrl: './contact-section.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './contact-section.component.scss'
 })
 export class ContactSectionComponent implements OnInit {

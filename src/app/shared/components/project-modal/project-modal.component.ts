@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
 import { Project } from '../../../pages/home/home.component';
 
@@ -121,6 +121,7 @@ import { Project } from '../../../pages/home/home.component';
       </div>
     }
     `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [`
     :host {
       display: contents;

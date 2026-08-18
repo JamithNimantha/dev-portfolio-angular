@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ProjectModalComponent } from '../../shared/components/project-modal/project-modal.component';
 import { TestimonialModalComponent } from '../../shared/components/testimonial-modal/testimonial-modal.component';
@@ -51,6 +51,7 @@ export interface Testimonial {
     BlogPostsSectionComponent
 ],
   templateUrl: './home.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 
 import {ProfileService, SocialLink} from "../../../services/profile.service";
 import {IconUtil} from "../../util/icon-util";
@@ -8,6 +8,7 @@ import {IconUtil} from "../../util/icon-util";
   standalone: true,
   imports: [],
   templateUrl: './footer.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
