@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+
 import { ProjectModalComponent } from '../../shared/components/project-modal/project-modal.component';
 import { TestimonialModalComponent } from '../../shared/components/testimonial-modal/testimonial-modal.component';
 import { AboutSectionComponent } from '../../shared/components/sections/about-section/about-section.component';
@@ -38,8 +38,7 @@ export interface Testimonial {
   selector: 'app-home',
   standalone: true,
   imports: [
-    CommonModule, 
-    ProjectModalComponent, 
+    ProjectModalComponent,
     TestimonialModalComponent,
     AboutSectionComponent,
     WhatIDoSectionComponent,
@@ -50,8 +49,9 @@ export interface Testimonial {
     EducationSectionComponent,
     ContactSectionComponent,
     BlogPostsSectionComponent
-  ],
+],
   templateUrl: './home.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {

@@ -1,12 +1,11 @@
-import {Component} from '@angular/core';
-import {NgForOf} from "@angular/common";
+import {Component, ChangeDetectionStrategy} from '@angular/core';
+
 
 @Component({
     selector: 'app-skills-section',
-    imports: [
-        NgForOf
-    ],
+    imports: [],
     templateUrl: './skills-section.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './skills-section.component.scss'
 })
 export class SkillsSectionComponent {

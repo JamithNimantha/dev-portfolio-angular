@@ -8,7 +8,7 @@
       </svg>
     </button>
   </div>
-  
+
   <div class="relative">
     <!-- Testimonial Slider -->
     <div class="overflow-hidden">
@@ -17,22 +17,21 @@
         @for (testimonial of featuredTestimonials; track testimonial.id) {
           <div class="border border-gray-200 dark:border-gray-700  bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-sm transition-all duration-300 group  hover:border-primary dark:hover:border-secondary transform hover:scale-102 hover:shadow-soft-lg">
             <div class="flex items-center mb-4">
-                <div class="h-12 w-12 rounded-full overflow-hidden mr-4 flex items-center justify-center bg-white dark:bg-gray-800">
-                    <ng-container *ngIf="testimonial.image && testimonial.image.trim().length > 0; else defaultIcon">
-                        <img
-                                [ngSrc]="testimonial.image"
-                                width="48"
-                                height="48"
-                                [alt]="testimonial.name"
-                                class="h-full w-full object-cover"
-                                (error)="testimonial.image = 'assets/icons/default.svg'"
-                        />
-                    </ng-container>
+              <div class="h-12 w-12 rounded-full overflow-hidden mr-4 flex items-center justify-center bg-white dark:bg-gray-800">
+                @if (testimonial.image && testimonial.image.trim().length > 0) {
+                  <img
+                    [ngSrc]="testimonial.image"
+                    width="48"
+                    height="48"
+                    [alt]="testimonial.name"
+                    class="h-full w-full object-cover"
+                    (error)="testimonial.image = 'assets/icons/default.svg'"
+                    />
+                } @else {
+                  <i class="fa-regular fa-circle-user text-gray-400 text-2xl"></i>
+                }
 
-                    <ng-template #defaultIcon>
-                        <i class="fa-regular fa-circle-user text-gray-400 text-2xl"></i>
-                    </ng-template>
-                </div>
+              </div>
               <div>
                 <h4 class="font-semibold text-gray-800 dark:text-white">{{testimonial.name}}</h4>
                 <p class="text-gray-600 dark:text-gray-400 text-sm">{{testimonial.company}}</p>
@@ -52,7 +51,7 @@
         }
       </div>
     </div>
-   
+
     <!-- Quote decoration -->
     <div class="absolute -bottom-4 -right-4 text-primary/10 dark:text-secondary/10">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="currentColor" viewBox="0 0 24 24">

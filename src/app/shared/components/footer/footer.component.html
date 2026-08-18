@@ -2,21 +2,25 @@
   <div class="max-w-7xl mx-auto py-6 md:py-8 px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col md:flex-row justify-between items-center">
       <div class="text-center md:text-left mb-4 md:mb-0">
-          &copy; {{ currentYear }} John Doe. All rights reserved.
+        &copy; {{ currentYear }} John Doe. All rights reserved.
       </div>
 
-      <div *ngIf="socialLinks" class="flex flex-wrap gap-3 justify-center">
-        <a *ngFor="let link of socialLinks"
-           [href]="link.url"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">
-          <span class="sr-only">{{ link.name }}</span>
-          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 512 512" aria-hidden="true">
-            <path [attr.d]="IconUtil.getIcon(link.icon)"></path>
-          </svg>
-        </a>
-      </div>
+      @if (socialLinks) {
+        <div class="flex flex-wrap gap-3 justify-center">
+          @for (link of socialLinks; track link) {
+            <a
+              [href]="link.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">
+              <span class="sr-only">{{ link.name }}</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 512 512" aria-hidden="true">
+                <path [attr.d]="IconUtil.getIcon(link.icon)"></path>
+              </svg>
+            </a>
+          }
+        </div>
+      }
     </div>
   </div>
 </footer>

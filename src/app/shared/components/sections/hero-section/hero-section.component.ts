@@ -1,13 +1,14 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {CommonModule, NgOptimizedImage} from '@angular/common';
+import {Component, Input, OnInit, ChangeDetectionStrategy} from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 import {ProfileService, SocialLink} from "../../../../services/profile.service";
 import {IconUtil} from "../../../util/icon-util";
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
+  imports: [NgOptimizedImage],
   templateUrl: './hero-section.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./hero-section.component.scss']
 })
 export class HeroSectionComponent implements OnInit {
