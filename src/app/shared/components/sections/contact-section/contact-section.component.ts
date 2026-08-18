@@ -9,7 +9,6 @@ import {ContactForm, ContactModalComponent} from "../../contact-modal/contact-mo
   standalone: true,
   imports: [ContactModalComponent],
   templateUrl: './contact-section.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './contact-section.component.scss'
 })
 export class ContactSectionComponent implements OnInit {

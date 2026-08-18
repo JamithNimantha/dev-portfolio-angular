@@ -18,7 +18,6 @@ import {BlogPost, BlogPostService} from "../../../../services/blog-post.service"
   standalone: true,
   imports: [],
   templateUrl: './blog-posts-section.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './blog-posts-section.component.scss'
 })
 export class BlogPostsSectionComponent implements OnInit {

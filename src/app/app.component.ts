@@ -18,7 +18,6 @@ interface ContactForm {
   standalone: true,
   imports: [RouterOutlet, RouterLink, CommonModule, FooterComponent, HeroSectionComponent, NgOptimizedImage],
   templateUrl: './app.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {

@@ -7,7 +7,6 @@ import { Project } from '../../../../pages/home/home.component';
   standalone: true,
   imports: [],
   templateUrl: './featured-projects-section.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './featured-projects-section.component.scss'
 })
 export class FeaturedProjectsSectionComponent {

@@ -8,7 +8,6 @@ import {IconUtil} from "../../util/icon-util";
   standalone: true,
   imports: [],
   templateUrl: './footer.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {

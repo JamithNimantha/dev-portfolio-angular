@@ -6,7 +6,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './about.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {

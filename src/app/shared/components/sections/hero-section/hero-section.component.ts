@@ -8,7 +8,6 @@ import {IconUtil} from "../../../util/icon-util";
   standalone: true,
   imports: [NgOptimizedImage],
   templateUrl: './hero-section.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./hero-section.component.scss']
 })
 export class HeroSectionComponent implements OnInit {

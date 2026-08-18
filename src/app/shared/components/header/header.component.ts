@@ -7,7 +7,6 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './header.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {

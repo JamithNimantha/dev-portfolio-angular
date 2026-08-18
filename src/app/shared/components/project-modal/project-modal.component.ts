@@ -121,7 +121,6 @@ import { Project } from '../../../pages/home/home.component';
       </div>
     }
     `,
-  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [`
     :host {
       display: contents;

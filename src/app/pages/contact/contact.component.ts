@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [FormsModule],
   templateUrl: './contact.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {

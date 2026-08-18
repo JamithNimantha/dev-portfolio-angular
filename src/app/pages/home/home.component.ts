@@ -51,7 +51,6 @@ export interface Testimonial {
     BlogPostsSectionComponent
 ],
   templateUrl: './home.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {

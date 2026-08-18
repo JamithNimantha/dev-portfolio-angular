@@ -5,7 +5,6 @@ import {Component, ChangeDetectionStrategy} from '@angular/core';
     selector: 'app-skills-section',
     imports: [],
     templateUrl: './skills-section.component.html',
-    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './skills-section.component.scss'
 })
 export class SkillsSectionComponent {

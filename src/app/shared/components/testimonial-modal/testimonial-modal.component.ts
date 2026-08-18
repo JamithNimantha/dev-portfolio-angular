@@ -103,7 +103,6 @@ export interface Testimonial {
       </div>
     }
     `,
-  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [`
     :host {
       display: contents;

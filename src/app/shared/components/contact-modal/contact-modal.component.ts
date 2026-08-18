@@ -100,7 +100,6 @@ export interface ContactForm {
       </div>
     }
     `,
-  changeDetection: ChangeDetectionStrategy.Eager,
   styles: [`
     :host {
       display: contents;
