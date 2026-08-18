@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import {CommonModule, NgOptimizedImage} from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import { Testimonial } from '../../testimonial-modal/testimonial-modal.component';
 
 @Component({
   selector: 'app-testimonials-section',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
+  imports: [NgOptimizedImage],
   templateUrl: './testimonials-section.component.html',
   styleUrl: './testimonials-section.component.scss'
 })

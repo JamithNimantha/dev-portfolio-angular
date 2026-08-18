@@ -1,11 +1,9 @@
 import {Component} from '@angular/core';
-import {NgForOf} from "@angular/common";
+
 
 @Component({
     selector: 'app-skills-section',
-    imports: [
-        NgForOf
-    ],
+    imports: [],
     templateUrl: './skills-section.component.html',
     styleUrl: './skills-section.component.scss'
 })

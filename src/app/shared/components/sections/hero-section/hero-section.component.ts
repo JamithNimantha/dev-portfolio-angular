@@ -1,12 +1,12 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {CommonModule, NgOptimizedImage} from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import {ProfileService, SocialLink} from "../../../../services/profile.service";
 import {IconUtil} from "../../../util/icon-util";
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
+  imports: [NgOptimizedImage],
   templateUrl: './hero-section.component.html',
   styleUrls: ['./hero-section.component.scss']
 })

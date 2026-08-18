@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
-import {CommonModule, isPlatformBrowser, NgOptimizedImage} from '@angular/common';
+import { CommonModule, isPlatformBrowser, NgOptimizedImage } from '@angular/common';
 import { Router, RouterOutlet, RouterLink, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { ContactModalComponent } from './shared/components/contact-modal/contact-modal.component';

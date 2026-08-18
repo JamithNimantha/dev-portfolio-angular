@@ -9,172 +9,172 @@
 
 <style>
   :host {
-    --bright-blue: oklch(51.01% 0.274 263.83);
-    --electric-violet: oklch(53.18% 0.28 296.97);
-    --french-violet: oklch(47.66% 0.246 305.88);
-    --vivid-pink: oklch(69.02% 0.277 332.77);
-    --hot-red: oklch(61.42% 0.238 15.34);
-    --orange-red: oklch(63.32% 0.24 31.68);
+  --bright-blue: oklch(51.01% 0.274 263.83);
+  --electric-violet: oklch(53.18% 0.28 296.97);
+  --french-violet: oklch(47.66% 0.246 305.88);
+  --vivid-pink: oklch(69.02% 0.277 332.77);
+  --hot-red: oklch(61.42% 0.238 15.34);
+  --orange-red: oklch(63.32% 0.24 31.68);
 
-    --gray-900: oklch(19.37% 0.006 300.98);
-    --gray-700: oklch(36.98% 0.014 302.71);
-    --gray-400: oklch(70.9% 0.015 304.04);
+  --gray-900: oklch(19.37% 0.006 300.98);
+  --gray-700: oklch(36.98% 0.014 302.71);
+  --gray-400: oklch(70.9% 0.015 304.04);
 
-    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
-      180deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
+  --red-to-pink-to-purple-vertical-gradient: linear-gradient(
+  180deg,
+  var(--orange-red) 0%,
+  var(--vivid-pink) 50%,
+  var(--electric-violet) 100%
+  );
 
-    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
-      90deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
+  --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
+  90deg,
+  var(--orange-red) 0%,
+  var(--vivid-pink) 50%,
+  var(--electric-violet) 100%
+  );
 
-    --pill-accent: var(--bright-blue);
+  --pill-accent: var(--bright-blue);
 
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  h1 {
-    font-size: 3.125rem;
-    color: var(--gray-900);
-    font-weight: 500;
-    line-height: 100%;
-    letter-spacing: -0.125rem;
-    margin: 0;
-    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-  }
+h1 {
+font-size: 3.125rem;
+color: var(--gray-900);
+font-weight: 500;
+line-height: 100%;
+letter-spacing: -0.125rem;
+margin: 0;
+font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+"Segoe UI Symbol";
+}
 
-  p {
-    margin: 0;
-    color: var(--gray-700);
-  }
+p {
+margin: 0;
+color: var(--gray-700);
+}
 
-  main {
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    box-sizing: inherit;
-    position: relative;
-  }
+main {
+width: 100%;
+min-height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 1rem;
+box-sizing: inherit;
+position: relative;
+}
 
-  .angular-logo {
-    max-width: 9.2rem;
-  }
+.angular-logo {
+max-width: 9.2rem;
+}
 
-  .content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 700px;
-    margin-bottom: 3rem;
-  }
+.content {
+display: flex;
+justify-content: space-around;
+width: 100%;
+max-width: 700px;
+margin-bottom: 3rem;
+}
 
-  .content h1 {
-    margin-top: 1.75rem;
-  }
+.content h1 {
+margin-top: 1.75rem;
+}
 
-  .content p {
-    margin-top: 1.5rem;
-  }
+.content p {
+margin-top: 1.5rem;
+}
 
-  .divider {
-    width: 1px;
-    background: var(--red-to-pink-to-purple-vertical-gradient);
-    margin-inline: 0.5rem;
-  }
+.divider {
+width: 1px;
+background: var(--red-to-pink-to-purple-vertical-gradient);
+margin-inline: 0.5rem;
+}
 
-  .pill-group {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-  }
+.pill-group {
+display: flex;
+flex-direction: column;
+align-items: start;
+flex-wrap: wrap;
+gap: 1.25rem;
+}
 
-  .pill {
-    display: flex;
-    align-items: center;
-    --pill-accent: var(--bright-blue);
-    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
-    color: var(--pill-accent);
-    padding-inline: 0.75rem;
-    padding-block: 0.375rem;
-    border-radius: 2.75rem;
-    border: 0;
-    transition: background 0.3s ease;
-    font-family: var(--inter-font);
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.4rem;
-    letter-spacing: -0.00875rem;
-    text-decoration: none;
-  }
+.pill {
+display: flex;
+align-items: center;
+--pill-accent: var(--bright-blue);
+background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
+color: var(--pill-accent);
+padding-inline: 0.75rem;
+padding-block: 0.375rem;
+border-radius: 2.75rem;
+border: 0;
+transition: background 0.3s ease;
+font-family: var(--inter-font);
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 500;
+line-height: 1.4rem;
+letter-spacing: -0.00875rem;
+text-decoration: none;
+}
 
-  .pill:hover {
-    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
-  }
+.pill:hover {
+background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
+}
 
-  .pill-group .pill:nth-child(6n + 1) {
-    --pill-accent: var(--bright-blue);
-  }
-  .pill-group .pill:nth-child(6n + 2) {
-    --pill-accent: var(--french-violet);
-  }
-  .pill-group .pill:nth-child(6n + 3),
-  .pill-group .pill:nth-child(6n + 4),
-  .pill-group .pill:nth-child(6n + 5) {
-    --pill-accent: var(--hot-red);
-  }
+.pill-group .pill:nth-child(6n + 1) {
+--pill-accent: var(--bright-blue);
+}
+.pill-group .pill:nth-child(6n + 2) {
+--pill-accent: var(--french-violet);
+}
+.pill-group .pill:nth-child(6n + 3),
+.pill-group .pill:nth-child(6n + 4),
+.pill-group .pill:nth-child(6n + 5) {
+--pill-accent: var(--hot-red);
+}
 
-  .pill-group svg {
-    margin-inline-start: 0.25rem;
-  }
+.pill-group svg {
+margin-inline-start: 0.25rem;
+}
 
-  .social-links {
-    display: flex;
-    align-items: center;
-    gap: 0.73rem;
-    margin-top: 1.5rem;
-  }
+.social-links {
+display: flex;
+align-items: center;
+gap: 0.73rem;
+margin-top: 1.5rem;
+}
 
-  .social-links path {
-    transition: fill 0.3s ease;
-    fill: var(--gray-400);
-  }
+.social-links path {
+transition: fill 0.3s ease;
+fill: var(--gray-400);
+}
 
-  .social-links a:hover svg path {
-    fill: var(--gray-900);
-  }
+.social-links a:hover svg path {
+fill: var(--gray-900);
+}
 
-  @media screen and (max-width: 650px) {
-    .content {
-      flex-direction: column;
-      width: max-content;
-    }
+@media screen and (max-width: 650px) {
+.content {
+flex-direction: column;
+width: max-content;
+}
 
-    .divider {
-      height: 1px;
-      width: 100%;
-      background: var(--red-to-pink-to-purple-horizontal-gradient);
-      margin-block: 1.5rem;
-    }
-  }
+.divider {
+height: 1px;
+width: 100%;
+background: var(--red-to-pink-to-purple-horizontal-gradient);
+margin-block: 1.5rem;
+}
+}
 </style>
 
 <div [ngClass]="{'dark': isDarkMode}" class="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900">
@@ -208,31 +208,39 @@
         <div class="flex items-center space-x-3">
           <!-- Dark Mode Toggle -->
           <button (click)="toggleDarkMode()" aria-label="Toggle Dark Mode" class="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">
-            <svg *ngIf="!isDarkMode" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-      </svg>
-            <svg *ngIf="isDarkMode" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
+            @if (!isDarkMode) {
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+            }
+            @if (isDarkMode) {
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            }
           </button>
 
           <!-- Contact button -->
           <div (click)="scrollToSection('contact')"
-             class="btn-outline hidden sm:inline-flex items-center transform transition-transform hover:scale-105">
+            class="btn-outline hidden sm:inline-flex items-center transform transition-transform hover:scale-105">
 
             <span>Contact Me</span>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
-                   stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-              </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
           </div>
 
           <!-- Mobile menu button -->
           <button (click)="toggleMenu()" aria-label="Toggle Mobile Menu" class="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path *ngIf="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              <path *ngIf="isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              @if (!isMenuOpen) {
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              }
+              @if (isMenuOpen) {
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              }
             </svg>
           </button>
         </div>
@@ -240,32 +248,34 @@
     </div>
 
     <!-- Mobile menu -->
-    <div *ngIf="isMenuOpen" class="md:hidden bg-white dark:bg-gray-800 shadow-md animate-slide-down overflow-hidden">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <div (click)="scrollToSection('about')" class="mobile-nav-link block w-full text-left px-3 py-2">About</div>
-        <div (click)="scrollToSection('projects')" class="mobile-nav-link block w-full text-left px-3 py-2">Projects</div>
-        <div (click)="scrollToSection('blog')" class="mobile-nav-link block w-full text-left px-3 py-2">Blog</div>
-        <div (click)="scrollToSection('experience')" class="mobile-nav-link block w-full text-left px-3 py-2">Experience</div>
-        <div (click)="scrollToSection('skills')" class="mobile-nav-link block w-full text-left px-3 py-2">Skills</div>
-        <div (click)="scrollToSection('testimonials')" class="mobile-nav-link block w-full text-left px-3 py-2">Testimonials</div>
-        <div (click)="scrollToSection('contact')" class="mobile-nav-link block w-full text-left px-3 py-2">Contact</div>
+    @if (isMenuOpen) {
+      <div class="md:hidden bg-white dark:bg-gray-800 shadow-md animate-slide-down overflow-hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <div (click)="scrollToSection('about')" class="mobile-nav-link block w-full text-left px-3 py-2">About</div>
+          <div (click)="scrollToSection('projects')" class="mobile-nav-link block w-full text-left px-3 py-2">Projects</div>
+          <div (click)="scrollToSection('blog')" class="mobile-nav-link block w-full text-left px-3 py-2">Blog</div>
+          <div (click)="scrollToSection('experience')" class="mobile-nav-link block w-full text-left px-3 py-2">Experience</div>
+          <div (click)="scrollToSection('skills')" class="mobile-nav-link block w-full text-left px-3 py-2">Skills</div>
+          <div (click)="scrollToSection('testimonials')" class="mobile-nav-link block w-full text-left px-3 py-2">Testimonials</div>
+          <div (click)="scrollToSection('contact')" class="mobile-nav-link block w-full text-left px-3 py-2">Contact</div>
+        </div>
       </div>
-    </div>
+    }
   </header>
 
   <!-- Main Content with hero section -->
   <div class="flex-grow">
     <!-- Hero Section - only show when showHero is true -->
-<!--    <section *ngIf="showHero" class="relative bg-gradient-to-r from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 py-16 md:py-20 overflow-hidden">-->
-<!--      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">-->
-<!--        <div class="md:flex md:items-center md:justify-between">-->
-<!--          <div class="md:w-1/2 animate-slide-up">-->
-<!--            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">-->
-<!--              <span class="block">Full-Stack </span>-->
-<!--                <span class="block text-primary dark:text-secondary">Developer</span>-->
-<!--            </h1>-->
-<!--            <p class="mt-3 text-base text-gray-600 dark:text-gray-300 sm:mt-5 sm:text-lg">-->
-<!--              Passionate about creating elegant solutions to complex problems. Specialized in building scalable web applications using modern technologies.-->
+    <!--    <section *ngIf="showHero" class="relative bg-gradient-to-r from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 py-16 md:py-20 overflow-hidden">-->
+    <!--      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">-->
+    <!--        <div class="md:flex md:items-center md:justify-between">-->
+    <!--          <div class="md:w-1/2 animate-slide-up">-->
+    <!--            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">-->
+    <!--              <span class="block">Full-Stack </span>-->
+    <!--                <span class="block text-primary dark:text-secondary">Developer</span>-->
+  <!--            </h1>-->
+  <!--            <p class="mt-3 text-base text-gray-600 dark:text-gray-300 sm:mt-5 sm:text-lg">-->
+  <!--              Passionate about creating elegant solutions to complex problems. Specialized in building scalable web applications using modern technologies.-->
 <!--            </p>-->
 <!--            <div class="mt-4 md:mt-6 flex flex-wrap gap-3">-->
 <!--              <a href="https://medium.com/@johndoe" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">-->
@@ -327,19 +337,19 @@
 <!--      <div class="absolute top-12 right-12 w-16 h-16 md:w-24 md:h-24 rounded-full bg-secondary/20 dark:bg-secondary/30 animate-pulse" style="animation-delay: 0.5s"></div>-->
 <!--      <div class="absolute bottom-20 right-8 w-8 h-8 md:w-12 md:h-12 rounded-full bg-primary/20 dark:bg-primary/30 animate-pulse" style="animation-delay: 1s"></div>-->
 <!--    </section>-->
-      <app-hero-section
-              [showHero]="showHero"
-              [scrollToSection]="scrollToSection.bind(this)"
-              >
-      </app-hero-section>
-    <!-- Main content -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-      <router-outlet></router-outlet>
-    </main>
-  </div>
+<app-hero-section
+  [showHero]="showHero"
+  [scrollToSection]="scrollToSection.bind(this)"
+  >
+</app-hero-section>
+<!-- Main content -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+  <router-outlet></router-outlet>
+</main>
+</div>
 
-  <!-- Footer -->
-    <app-footer></app-footer>
+<!-- Footer -->
+<app-footer></app-footer>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

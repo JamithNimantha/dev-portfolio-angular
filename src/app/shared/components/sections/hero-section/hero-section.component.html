@@ -1,88 +1,92 @@
-<section *ngIf="showHero"
-         class="relative bg-gradient-to-r from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 py-16 md:py-20 overflow-hidden">
+@if (showHero) {
+  <section
+    class="relative bg-gradient-to-r from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 py-16 md:py-20 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="md:flex md:items-center md:justify-between">
-            <div class="md:w-1/2 animate-slide-up">
-                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
-                    <span class="block">Full-Stack</span>
-                    <span class="block text-primary dark:text-secondary">Software Engineer</span>
-                </h1>
-                <p class="mt-3 text-base text-gray-600 dark:text-gray-300 sm:mt-5 sm:text-lg">
-                    I build production software with Java, Spring, and Angular, from backend services and APIs to the interfaces people use every day. I ship real products, end to end.
-                </p>
-                <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-xl">
-                    <div class="text-center sm:text-left">
-                        <div class="text-2xl font-extrabold text-primary dark:text-secondary">5+</div>
-                        <div class="text-xs text-gray-600 dark:text-gray-400">Years Experience</div>
-                    </div>
-                    <div class="text-center sm:text-left">
-                        <div class="text-2xl font-extrabold text-primary dark:text-secondary">3</div>
-                        <div class="text-xs text-gray-600 dark:text-gray-400">Industries</div>
-                    </div>
-                    <div class="text-center sm:text-left">
-                        <div class="text-2xl font-extrabold text-primary dark:text-secondary">25+</div>
-                        <div class="text-xs text-gray-600 dark:text-gray-400">Client Reviews</div>
-                    </div>
-                    <div class="text-center sm:text-left">
-                        <div class="text-2xl font-extrabold text-primary dark:text-secondary">12+</div>
-                        <div class="text-xs text-gray-600 dark:text-gray-400">Shipped Projects</div>
-                    </div>
-                </div>
-                <div class="mt-4 md:mt-6 flex flex-wrap gap-3">
-                    <a *ngFor="let link of socialLinks"
-                       [href]="link.url"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors"
-                       [attr.aria-label]="link.name">
-                            <svg class="h-8 w-8 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                              fill="currentColor">
-                                <path [attr.d]="IconUtil.getIcon(link.icon)"></path>
-                            </svg>
-                    </a>
-                    <!-- Add other social links here -->
-                </div>
-                <div class="mt-6 md:mt-8 flex flex-wrap gap-4">
-                    <button (click)="scrollToSection('projects')"
-                            class="btn-primary font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center">
-                        <span>View Projects</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                        </svg>
-                    </button>
-                    <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer"
-                       class="btn-outline font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center">
-                        <span>Download Resume</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                        </svg>
-                    </a>
-<!--                    <button (click)="scrollToSection('contact')"-->
-<!--                            class="bg-transparent hover:bg-blue-600 text-blue-600 hover:text-white font-semibold py-3 px-6 border border-blue-600 hover:border-transparent rounded-lg transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center">-->
-<!--                        <span>Contact Me</span>-->
-<!--                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"-->
-<!--                             stroke="currentColor">-->
-<!--                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"-->
-<!--                                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>-->
-<!--                        </svg>-->
-<!--                    </button>-->
-                </div>
+      <div class="md:flex md:items-center md:justify-between">
+        <div class="md:w-1/2 animate-slide-up">
+          <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+            <span class="block">Full-Stack</span>
+            <span class="block text-primary dark:text-secondary">Software Engineer</span>
+          </h1>
+          <p class="mt-3 text-base text-gray-600 dark:text-gray-300 sm:mt-5 sm:text-lg">
+            I build production software with Java, Spring, and Angular, from backend services and APIs to the interfaces people use every day. I ship real products, end to end.
+          </p>
+          <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-xl">
+            <div class="text-center sm:text-left">
+              <div class="text-2xl font-extrabold text-primary dark:text-secondary">5+</div>
+              <div class="text-xs text-gray-600 dark:text-gray-400">Years Experience</div>
             </div>
-            <div class="mt-8 md:mt-0 md:w-1/2 flex justify-center animate-slide-up" style="animation-delay: 0.3s">
-                <img ngSrc="assets/images/profile.webp" alt="John Doe"
-                     class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-xl transition-transform hover:scale-105"
-                     height="512" width="512" priority>
+            <div class="text-center sm:text-left">
+              <div class="text-2xl font-extrabold text-primary dark:text-secondary">3</div>
+              <div class="text-xs text-gray-600 dark:text-gray-400">Industries</div>
             </div>
-        </div>
+            <div class="text-center sm:text-left">
+              <div class="text-2xl font-extrabold text-primary dark:text-secondary">25+</div>
+              <div class="text-xs text-gray-600 dark:text-gray-400">Client Reviews</div>
+            </div>
+            <div class="text-center sm:text-left">
+              <div class="text-2xl font-extrabold text-primary dark:text-secondary">12+</div>
+              <div class="text-xs text-gray-600 dark:text-gray-400">Shipped Projects</div>
+            </div>
+          </div>
+          <div class="mt-4 md:mt-6 flex flex-wrap gap-3">
+            @for (link of socialLinks; track link) {
+              <a
+                [href]="link.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors"
+                [attr.aria-label]="link.name">
+                <svg class="h-8 w-8 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                  fill="currentColor">
+                  <path [attr.d]="IconUtil.getIcon(link.icon)"></path>
+                </svg>
+              </a>
+            }
+            <!-- Add other social links here -->
+          </div>
+          <div class="mt-6 md:mt-8 flex flex-wrap gap-4">
+            <button (click)="scrollToSection('projects')"
+              class="btn-primary font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center">
+              <span>View Projects</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </button>
+            <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer"
+              class="btn-outline font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center">
+              <span>Download Resume</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+              </svg>
+            </a>
+            <!--                    <button (click)="scrollToSection('contact')"-->
+            <!--                            class="bg-transparent hover:bg-blue-600 text-blue-600 hover:text-white font-semibold py-3 px-6 border border-blue-600 hover:border-transparent rounded-lg transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center">-->
+            <!--                        <span>Contact Me</span>-->
+            <!--                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"-->
+            <!--                             stroke="currentColor">-->
+            <!--                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"-->
+            <!--                                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>-->
+          <!--                        </svg>-->
+        <!--                    </button>-->
+      </div>
     </div>
-    <!-- Decorative elements -->
-    <div class="absolute -bottom-8 -left-8 w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/20 dark:bg-primary/30 animate-pulse"></div>
-    <div class="absolute top-12 right-12 w-16 h-16 md:w-24 md:h-24 rounded-full bg-secondary/20 dark:bg-secondary/30 animate-pulse"
-         style="animation-delay: 0.5s"></div>
-    <div class="absolute bottom-20 right-8 w-8 h-8 md:w-12 md:h-12 rounded-full bg-primary/20 dark:bg-primary/30 animate-pulse"
-         style="animation-delay: 1s"></div>
+    <div class="mt-8 md:mt-0 md:w-1/2 flex justify-center animate-slide-up" style="animation-delay: 0.3s">
+      <img ngSrc="assets/images/profile.webp" alt="John Doe"
+        class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-xl transition-transform hover:scale-105"
+        height="512" width="512" priority>
+    </div>
+  </div>
+</div>
+<!-- Decorative elements -->
+<div class="absolute -bottom-8 -left-8 w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/20 dark:bg-primary/30 animate-pulse"></div>
+<div class="absolute top-12 right-12 w-16 h-16 md:w-24 md:h-24 rounded-full bg-secondary/20 dark:bg-secondary/30 animate-pulse"
+style="animation-delay: 0.5s"></div>
+<div class="absolute bottom-20 right-8 w-8 h-8 md:w-12 md:h-12 rounded-full bg-primary/20 dark:bg-primary/30 animate-pulse"
+style="animation-delay: 1s"></div>
 </section>
+}

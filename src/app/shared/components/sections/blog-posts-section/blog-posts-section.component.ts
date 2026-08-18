@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import {BlogPost, BlogPostService} from "../../../../services/blog-post.service";
 
 // export interface BlogPost {
@@ -16,7 +16,7 @@ import {BlogPost, BlogPostService} from "../../../../services/blog-post.service"
 @Component({
   selector: 'app-blog-posts-section',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './blog-posts-section.component.html',
   styleUrl: './blog-posts-section.component.scss'
 })

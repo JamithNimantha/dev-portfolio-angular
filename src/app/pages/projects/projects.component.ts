@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 export interface Project {
   id: number;
@@ -15,7 +15,7 @@ export interface Project {
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
